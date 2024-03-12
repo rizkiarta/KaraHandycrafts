@@ -589,6 +589,8 @@ a.text-dark:hover {
   }
 }
 
+
+
 /* - Pattern Overlay
 ------------------------------------------------------------- */
 .icon-overlay {
@@ -700,6 +702,7 @@ animation: loader 5s infinite ease-out;
 .navbar-users {
   font-size: 20px;
 }
+
 
 /* - Billboard
 ------------------------------------------------------------- */
@@ -864,7 +867,3 @@ animation: loader 5s infinite ease-out;
 .product-quantity .input-group .input-number {
   height: 55px;
 }
-
-/* BANNER */
-
-/* KATEGORI */
