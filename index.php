@@ -345,11 +345,11 @@
                                 <h3 class="m-0">
                                     <a href="single-product.html" class="text-secondary">Cotton Outlay</a>
                                 </h3>
-                                <div class="product-price text-primary">$320.00</div>
+                                <div class="product-price text-primary">Rp15.000</div>
                                 <a href="cart.html"
                                     class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
                                     data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
-                                    aria-controls="offcanvasCart">Add to cart
+                                    aria-controls="offcanvasCart">Order Now
                                     <svg class="cart" width="18" height="18">
                                         <use xlink:href="#cart"></use>
                                     </svg>
@@ -366,11 +366,11 @@
                                 <h3 class="m-0">
                                     <a href="single-product.html" class="text-secondary">Woollen Pattern</a>
                                 </h3>
-                                <div class="product-price text-primary">$320.00</div>
+                                <div class="product-price text-primary">Rp15.000</div>
                                 <a href="cart.html"
                                     class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
                                     data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
-                                    aria-controls="offcanvasCart">Add to cart
+                                    aria-controls="offcanvasCart">Order Now
                                     <svg class="cart" width="18" height="18">
                                         <use xlink:href="#cart"></use>
                                     </svg>
@@ -387,11 +387,11 @@
                                 <h3 class="m-0">
                                     <a href="single-product.html" class="text-secondary">Casual Rabbit</a>
                                 </h3>
-                                <div class="product-price text-primary">$320.00</div>
+                                <div class="product-price text-primary">Rp15.000</div>
                                 <a href="cart.html"
                                     class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
                                     data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
-                                    aria-controls="offcanvasCart">Add to cart
+                                    aria-controls="offcanvasCart">Order Now
                                     <svg class="cart" width="18" height="18">
                                         <use xlink:href="#cart"></use>
                                     </svg>
@@ -408,11 +408,11 @@
                                 <h3 class="m-0">
                                     <a href="single-product.html" class="text-secondary">Uffy Unicorn</a>
                                 </h3>
-                                <div class="product-price text-primary">$320.00</div>
+                                <div class="product-price text-primary">Rp15.000</div>
                                 <a href="cart.html"
                                     class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
                                     data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
-                                    aria-controls="offcanvasCart">Add to cart
+                                    aria-controls="offcanvasCart">Order Now
                                     <svg class="cart" width="18" height="18">
                                         <use xlink:href="#cart"></use>
                                     </svg>
@@ -429,11 +429,11 @@
                                 <h3 class="m-0">
                                     <a href="single-product.html" class="text-secondary">Cotton Outlay</a>
                                 </h3>
-                                <div class="product-price text-primary">$320.00</div>
+                                <div class="product-price text-primary">Rp15.000</div>
                                 <a href="cart.html"
                                     class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
                                     data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
-                                    aria-controls="offcanvasCart">Add to cart
+                                    aria-controls="offcanvasCart">Order Now
                                     <svg class="cart" width="18" height="18">
                                         <use xlink:href="#cart"></use>
                                     </svg>
