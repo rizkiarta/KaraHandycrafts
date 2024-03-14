@@ -147,7 +147,7 @@ if(!isset($_SESSION['user'])) {
                             ?>
                         <div class="row">
                             <div class="col-lg-6 text-right">
-                                Copyright 2024 <a href="?">PerpustakaanDigital</a>
+                                Copyright 2024 <a href="?">Kara Handycrafts</a>
                             </div>
                         </div>
                     </div>

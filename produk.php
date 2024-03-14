@@ -1,7 +1,3 @@
-<?php
-include "koneksi.php";
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -84,7 +80,25 @@ include "koneksi.php";
                 d="M15.75 19.13c-.83 0-1.5-.84-1.5-1.88c0-1.03.67-1.87 1.5-1.87s1.5.84 1.5 1.87c0 1.04-.67 1.88-1.5 1.88M12 11.25c-1.24 0-2.25-.84-2.25-1.87c0-1.04 1.01-1.88 2.25-1.88s2.25.84 2.25 1.88c0 1.03-1.01 1.87-2.25 1.87m-3.75 7.88c-.83 0-1.5-.84-1.5-1.88c0-1.03.67-1.87 1.5-1.87s1.5.84 1.5 1.87c0 1.04-.67 1.88-1.5 1.88M12 8.25c.41 0 .75.34.75.75s-.34.75-.75.75s-.75-.34-.75-.75s.34-.75.75-.75M18.75 12c-.32 0-.63.07-.91.2c-.48-.61-1.13-1.13-1.91-1.53c.57-.8.91-1.77.91-2.82v-.06c1.09-.23 1.91-1.2 1.91-2.37c0-1.33-1.09-2.42-2.42-2.42c-.69 0-1.33.29-1.75.75a4.813 4.813 0 0 0-5.16 0C9 3.29 8.36 3 7.67 3C6.34 3 5.25 4.09 5.25 5.42c0 1.16.82 2.13 1.9 2.37v.06c0 1.05.35 2.03.91 2.82c-.77.4-1.42.92-1.9 1.53A2.24 2.24 0 0 0 3 14.25c0 1.25 1 2.25 2.25 2.25h.06c-.04.24-.06.5-.06.75c0 2.07 1.34 3.75 3 3.75c1.01 0 1.9-.63 2.45-1.59c.42.06.85.09 1.3.09c.45 0 .88-.03 1.3-.09c.55.96 1.44 1.59 2.45 1.59c1.66 0 3-1.68 3-3.75c0-.25-.02-.51-.06-.75h.06c1.25 0 2.25-1 2.25-2.25S20 12 18.75 12" />
         </symbol>
     </svg>
-
+    <!-- <div class="preloader">
+        <div class="loader">
+            <div class="dot">
+                <svg class="teddybear svg-white" width="40" height="40">
+                    <use xlink:href="#teddybear"></use>
+                </svg>
+            </div>
+            <div class="dot">
+                <svg class="teddybear svg-white" width="40" height="40">
+                    <use xlink:href="#teddybear"></use>
+                </svg>
+            </div>
+            <div class="dot">
+                <svg class="teddybear svg-white" width="40" height="40">
+                    <use xlink:href="#teddybear"></use>
+                </svg>
+            </div>
+        </div>
+    </div> -->
     <header id="header" class="site-header bg-light py-3">
         <nav class="navbar navbar-expand-lg" aria-label="Offcanvas navbar large">
             <div class="container-lg">
@@ -113,12 +127,14 @@ include "koneksi.php";
                                     aria-expanded="false">Shop</a>
                             </li>
                             <li class="nav-item ms-3 ">
-                                <a class="nav-link text-dark" href="galerry.php" role="button"
+                                <a class="nav-link text-dark" href="gallery.php" role="button"
                                     aria-expanded="false">Gallery</a>
                             </li>
+                            <li class="nav-item ms-3">
+                                <a class="nav-link text-dark" href="about.php">About Us</a>
+                            </li>
                             <li class="nav-item ms-3 ">
-                                <a class="nav-link text-dark" href="contact.php" role="button"
-                                    aria-expanded="false">Contact
+                                <a class="nav-link text-dark" href="contact.php" role="button" aria-expanded="false">Contact
                                     Us</a>
                             </li>
                         </ul>
@@ -141,119 +157,6 @@ include "koneksi.php";
         </nav>
     </header>
 
-    <!-- BANNER -->
-    <section id="intro" class="bg-linear">
-        <div class="container-lg">
-            <div class="swiper main-swiper pt-2">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="banner-item d-flex text-center align-items-center">
-                            <div class="row">
-                                <div class="col-lg-7">
-                                    <div class="image-holder mb-lg-0 mb-md-2">
-                                        <img src="images/pages/banner-1.jpg" alt="product"
-                                            class="img-fluid rounded-4 banner-image">
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 col-md-11 col-sm-10 mx-auto">
-                                    <div
-                                        class="banner-content w-100 h-100 position-relative bg-light border rounded-4 mx-auto d-flex align-items-center">
-                                        <div class="col-lg-9 col-md-6 col-sm-8 text-center mx-auto py-lg-6">
-                                            <h1 class="display-2">Aksesoris <span
-                                                    class="display-4 text-secondary d-block">Lorem ipsum dolor sit
-                                                    amet.</span>
-                                            </h1>
-                                            <div class="btn-center mt-4">
-                                                <a href="shop-with-sidebar.html"
-                                                    class="btn btn-primary btn-md text-uppercase rounded-0">Order
-                                                    Now</a>
-                                            </div>
-                                        </div>
-                                        <div class="bg-pattern-overlay position-absolute">
-                                            <img src="images/pattern-overlay1.png" alt="pattern"
-                                                class="img-fluid pattern-overlay">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="banner-item d-flex text-center align-items-center">
-                            <div class="row">
-                                <div class="col-lg-7">
-                                    <div class="image-holder mb-lg-0 mb-md-2">
-                                        <img src="images/pages/banner-2.jpg" alt="product" class="img-fluid rounded-4">
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 col-md-11 col-sm-10 mx-auto">
-                                    <div
-                                        class="banner-content w-100 h-100 position-relative bg-light border rounded-4 mx-auto d-flex align-items-center">
-                                        <div class="col-lg-9 col-md-6 col-sm-8 text-center mx-auto py-lg-6">
-                                            <h1 class="display-2">Dolls <span
-                                                    class="display-4 text-secondary d-block">Online Store</span>
-                                            </h1>
-                                            <div class="btn-center mt-4">
-                                                <a href="shop-with-sidebar.html"
-                                                    class="btn btn-primary btn-md text-uppercase rounded-0">Order
-                                                    Now</a>
-                                            </div>
-                                        </div>
-                                        <div class="bg-pattern-overlay position-absolute">
-                                            <img src="images/pattern-overlay1.png" alt="pattern" class="img-fluid">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="banner-item d-flex text-center align-items-center">
-                            <div class="row">
-                                <div class="col-lg-7">
-                                    <div class="image-holder mb-lg-0 mb-md-2">
-                                        <img src="images/pages/banner-3.jpg" alt="product" class="img-fluid rounded-4">
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 col-md-11 col-sm-10 mx-auto">
-                                    <div
-                                        class="banner-content w-100 h-100 position-relative bg-light border rounded-4 mx-auto d-flex align-items-center">
-                                        <div class="col-lg-9 col-md-6 col-sm-8 text-center mx-auto py-lg-6">
-                                            <h1 class="display-2">Cute <span
-                                                    class="display-4 text-secondary d-block">Soft Toys</span>
-                                            </h1>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sed,
-                                                quidem explicabo ea velit repellat saepe obcaecati quo magni rerum.</p>
-                                            <div class="btn-center mt-4">
-                                                <a href="shop-with-sidebar.html"
-                                                    class="btn btn-primary btn-md text-uppercase rounded-0">Shop Now</a>
-                                            </div>
-                                        </div>
-                                        <div class="bg-pattern-overlay position-absolute">
-                                            <img src="images/pattern-overlay1.png" alt="pattern" class="img-fluid">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-arrow-wrap position-absolute d-flex align-items-center">
-                    <div class="swiper-arrow swiper-arrow-prev position-absolute bg-gray-1 p-3">
-                        <svg class="chevron-left" width="25" height="25">
-                            <use xlink:href="#chevron-left" />
-                        </svg>
-                    </div>
-                    <div class="swiper-arrow swiper-arrow-next position-absolute bg-gray-1 p-3">
-                        <svg class="chevron-right" width="25" height="25">
-                            <use xlink:href="#chevron-right" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- KATEGORI -->
     <section id="category" class="my-lg-12 py-lg-7 mb-lg-0 position-relative bg-light">
         <div class="cloud-overlay position-absolute overflow-x-hidden w-100">
@@ -273,10 +176,7 @@ include "koneksi.php";
                     <div class="image-holder position-relative">
                         <img src="images/pages/kate-1.jpg" alt="dress" class="img-fluid rounded-4">
                         <div class="btn-wrap position-absolute d-flex align-items-center justify-content-center">
-                            <a href="produk.php?kategori=Gelang"
-                                class="btn btn-md btn-primary text-uppercase rounded-0">
-                                Gelang
-                            </a>
+                            <a href="shop.html" class="btn btn-md btn-primary text-uppercase rounded-0">Gelang</a>
                         </div>
                     </div>
                 </div>
@@ -284,7 +184,7 @@ include "koneksi.php";
                     <div class="image-holder position-relative">
                         <img src="images/pages/kate-2.jpg" alt="hats" class="img-fluid rounded-4">
                         <div class="btn-wrap position-absolute d-flex align-items-center justify-content-center">
-                            <a href="produk.php?kategori=Kalung"
+                            <a href="shop-with-sidebar.html"
                                 class="btn btn-md btn-primary  text-uppercase rounded-0">Kalung</a>
                         </div>
                     </div>
@@ -293,7 +193,7 @@ include "koneksi.php";
                     <div class="image-holder position-relative">
                         <img src="images/pages/kate-3.jpg" alt="toys" class="img-fluid rounded-4">
                         <div class="btn-wrap position-absolute d-flex align-items-center justify-content-center">
-                            <a href="produk.php?kategori=Strap"
+                            <a href="shop-with-sidebar.html"
                                 class="btn btn-md btn-primary  text-uppercase rounded-0">Strap</a>
                         </div>
                     </div>
@@ -302,7 +202,7 @@ include "koneksi.php";
                     <div class="image-holder position-relative">
                         <img src="images/pages/kate-4.jpg" alt="toys" class="img-fluid rounded-4">
                         <div class="btn-wrap position-absolute d-flex align-items-center justify-content-center">
-                            <a href="produk.php?kategori=Cin-cin"
+                            <a href="shop-with-sidebar.html"
                                 class="btn btn-md btn-primary  text-uppercase rounded-0">Cin-cin</a>
                         </div>
                     </div>
@@ -328,6 +228,27 @@ include "koneksi.php";
             </div>
             <div class="swiper product-swiper">
                 <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="product-item">
+                            <div class="image-holder text-center p-3 mb-4 border rounded-4">
+                                <img src="images/produk/gelang-10.jpg" alt="toy" class="img-fluid">
+                            </div>
+                            <div class="product-info ps-2">
+                                <h3 class="m-0">
+                                    <a href="single-product.html" class="text-secondary">Cotton Outlay</a>
+                                </h3>
+                                <div class="product-price text-primary">Rp15.000</div>
+                                <a href="cart.html"
+                                    class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
+                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
+                                    aria-controls="offcanvasCart">Order Now
+                                    <svg class="cart" width="18" height="18">
+                                        <use xlink:href="#cart"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="swiper-slide">
                         <div class="product-item">
                             <div class="image-holder text-center p-3 mb-4 border rounded-4">
@@ -414,22 +335,27 @@ include "koneksi.php";
                     </div>
                 </div>
             </div>
-            <div class="see-more">
-                <a href=""></a>
-                </adiv>
+            <div class="arrow-wrap">
+                <div
+                    class="swiper-arrow chevron-arrow-left position-absolute d-flex align-items-center border bg-light rounded-pill justify-content-center p-3">
+                    <svg class="chevron-left" width="25" height="25">
+                        <use xlink:href="#chevron-left"></use>
+                    </svg>
+                </div>
+                <div
+                    class="swiper-arrow chevron-arrow-right position-absolute d-flex align-items-center border bg-light rounded-pill justify-content-center p-3">
+                    <svg class="chevron-right" width="25" height="25">
+                        <use xlink:href="#chevron-right"></use>
+                    </svg>
+                </div>
             </div>
+        </div>
     </section>
 
-    <!-- ABOUT US -->
-    <section id="about" class="py-lg-7 bg-light">
+    <!-- TESTI -->
+    <section id="testimonials" class="py-lg-7 bg-light">
         <div class="container">
             <div class="row">
-                <div class="display-header text-center position-relative">
-                    <h2 class="display-2">About Us</h2>
-                    <div class="icon-overlay position-absolute">
-                        <img src="images/star-icon-overlay.png" alt="icon overlay">
-                    </div>
-                </div>
                 <div class="col-lg-3 col-md-4">
                     <div class="quotation-mark">
                         <svg class="quote text-primary" width="167">
@@ -438,91 +364,48 @@ include "koneksi.php";
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8 position-relative">
-                    <div class="review-item col-md-12">
-                        <blockquote class="fs-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cum
-                            hic
-                            eius ullam voluptatem quod magni veritatis dolorum nobis optio laudantium quia unde sed
-                            adipisci accusamus, dignissimos debitis autem quaerat magnam, atque omnis repellat. Non
-                            praesentium distinctio soluta cumque autem at ullam omnis odio, sapiente, voluptates eum,
-                            voluptate magnam natus.</blockquote>
+                    <div class="swiper review-swiper d-flex mt-5">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="review-item col-md-11">
+                                    <blockquote class="fs-2">I recently visited this kid
+                                        store & impressed with products
+                                        they offer. There is from clothing to toys to
+                                        educational games, they have
+                                        everything.</blockquote>
+                                    <div class="author-detail">
+                                        <div class="name text-secondary text-uppercase pt-2">
+                                            - Joshna Brown</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="review-item col-md-11">
+                                    <blockquote class="fs-2">Toys are intriguing, and I
+                                        want to see what I can do with
+                                        them. On a deeper level, they represent one way
+                                        that society socializes its
+                                        young.</blockquote>
+                                    <div class="author-detail">
+                                        <div class="name text-secondary text-uppercase pt-2">
+                                            - Emma Turner</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="review-item col-md-11">
+                                    <blockquote class="fs-2">To a child, often the box a
+                                        toy came in is more appealing
+                                        than the toy itself.</blockquote>
+                                    <div class="author-detail">
+                                        <div class="name text-secondary text-uppercase pt-2">
+                                            - Jennie Lewis</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="swiper-pagination position-absolute text-start"></div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="py-lg-7 bg-light">
-        <div class="container-lg">
-            <div class="row justify-content-center">
-                <div class="display-header text-center position-relative">
-                    <h2 class="display-2 text-center">Our Gallery</h2>
-                    <div class="icon-overlay position-absolute">
-                        <img src="images/star-icon-overlay.png" alt="icon overlay">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <figure class="gallery-item text-center">
-                        <a href="images/gallery/gelang-14.jpg" title="doll" class="image-link">
-                            <img src="images/gallery/gelang-14.jpg" alt="gallery" class="img-fluid rounded-4">
-                        </a>
-                    </figure>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <figure class="gallery-item text-center">
-                        <a href="images/gallery/gelang-22.jpg" title="doll" class="image-link">
-                            <img src="images/gallery/gelang-22.jpg" alt="gallery" class="img-fluid rounded-4">
-                        </a>
-                    </figure>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <figure class="gallery-item text-center">
-                        <a href="images/gallery/gelang-18.jpg" title="doll" class="image-link">
-                            <img src="images/gallery/gelang-18.jpg" alt="gallery" class="img-fluid rounded-4">
-                        </a>
-                    </figure>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <figure class="gallery-item text-center">
-                        <a href="images/gallery/gelang-21.jpg" title="doll" class="image-link">
-                            <img src="images/gallery/gelang-21.jpg" alt="gallery" class="img-fluid rounded-4">
-                        </a>
-                    </figure>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <figure class="gallery-item text-center">
-                        <a href="images/gallery/kalung-5.jpg" title="doll" class="image-link">
-                            <img src="images/gallery/kalung-5.jpg" alt="gallery" class="img-fluid rounded-4">
-                        </a>
-                    </figure>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <figure class="gallery-item text-center">
-                        <a href="images/gallery/kalung-.9jpg" data-lightbox-gallery="gallery1" title="doll"
-                            class="image-link">
-                            <img src="images/gallery/kalung-9.jpg" alt="gallery" class="img-fluid rounded-4">
-                        </a>
-                    </figure>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <figure class="gallery-item text-center">
-                        <a href="images/gallery/strap-3.jpg" data-lightbox-gallery="gallery1" title="doll"
-                            class="image-link">
-                            <img src="images/gallery/strap-3.jpg" alt="gallery" class="img-fluid rounded-4">
-                        </a>
-                    </figure>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <figure class="gallery-item text-center">
-                        <a href="images/gallery/strap-5.jpg" data-lightbox-gallery="gallery1" title="doll"
-                            class="image-link">
-                            <img src="images/gallery/strap-5.jpg" alt="gallery" class="img-fluid rounded-4">
-                        </a>
-                    </figure>
+                    <div class="swiper-pagination position-absolute text-start"></div>
                 </div>
             </div>
         </div>
@@ -543,13 +426,16 @@ include "koneksi.php";
                                 <a href="index.html" class="item-anchor">Home</a>
                             </li>
                             <li class="menu-item pb-2">
+                                <a href="about.html" class="item-anchor">About</a>
+                            </li>
+                            <li class="menu-item pb-2">
+                                <a href="blog-with-sidebar.html" class="item-anchor">Blog</a>
+                            </li>
+                            <li class="menu-item pb-2">
                                 <a href="shop-with-sidebar.html" class="item-anchor">Shop</a>
                             </li>
                             <li class="menu-item pb-2">
                                 <a href="contact.html" class="item-anchor">Contact</a>
-                            </li>
-                            <li class="menu-item pb-2">
-                                <a href="contact.html" class="item-anchor">Gallery</a>
                             </li>
                         </ul>
                     </div>
