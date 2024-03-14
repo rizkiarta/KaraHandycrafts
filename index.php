@@ -122,17 +122,18 @@
                             <li class="nav-item ms-3">
                                 <a class="nav-link text-dark active" aria-current="page" href="#">Home</a>
                             </li>
+                            <li class="nav-item ms-3 ">
+                                <a class="nav-link text-dark" href="#" role="button" aria-expanded="false">Shop</a>
+                            </li>
+                            <li class="nav-item ms-3 ">
+                                <a class="nav-link text-dark" href="#" role="button" aria-expanded="false">Gallery</a>
+                            </li>
                             <li class="nav-item ms-3">
-                                <a class="nav-link text-dark" href="about.html">About</a>
+                                <a class="nav-link text-dark" href="about.html">About Us</a>
                             </li>
                             <li class="nav-item ms-3 ">
-                                <a class="nav-link text-dark" href="#" role="button" aria-expanded="false"> Shop</a>
-                            </li>
-                            <li class="nav-item ms-3 ">
-                                <a class="nav-link text-dark" href="#" role="button" aria-expanded="false"> Pages </a>
-                            </li>
-                            <li class="nav-item ms-3 ">
-                                <a class="nav-link text-dark" href="#" role="button" aria-expanded="false">Blog</a>
+                                <a class="nav-link text-dark" href="#" role="button" aria-expanded="false">Contact
+                                    Us</a>
                             </li>
                         </ul>
                         <div class="navbar-users">
@@ -142,7 +143,7 @@
                                     </svg>
                                     <input type="text" placeholder="Search Here..."
                                         class="outline-none border-0 rounded-5 bg-transparent fst-italic">
-                                    <button class="btn btn-outline-gray rounded-5">Cari</button>
+                                    <button class="btn btn-outline-gray rounded-5">Search</button>
                                 </li>
                             </ul>
                         </div>
@@ -459,6 +460,7 @@
             </div>
         </div>
     </section>
+
     <!-- TESTI -->
     <section id="testimonials" class="py-lg-7 bg-light">
         <div class="container">
@@ -539,53 +541,53 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <figure class="gallery-item text-center">
-                        <a href="images/gallery/gelang-14.jpg" title="doll" class="image-link">
-                            <img src="images/gallery/gelang-14.jpg" alt="gallery" class="img-fluid rounded-4">
+                        <a href="images/gallery/gelang-22.jpg" title="doll" class="image-link">
+                            <img src="images/gallery/gelang-22.jpg" alt="gallery" class="img-fluid rounded-4">
                         </a>
                     </figure>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <figure class="gallery-item text-center">
-                        <a href="images/gallery/gelang-14.jpg" title="doll" class="image-link">
-                            <img src="images/gallery/gelang-14.jpg" alt="gallery" class="img-fluid rounded-4">
+                        <a href="images/gallery/gelang-18.jpg" title="doll" class="image-link">
+                            <img src="images/gallery/gelang-18.jpg" alt="gallery" class="img-fluid rounded-4">
                         </a>
                     </figure>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <figure class="gallery-item text-center">
-                        <a href="images/gallery/gelang-14.jpg" title="doll" class="image-link">
-                            <img src="images/gallery/gelang-14.jpg" alt="gallery" class="img-fluid rounded-4">
+                        <a href="images/gallery/gelang-21.jpg" title="doll" class="image-link">
+                            <img src="images/gallery/gelang-21.jpg" alt="gallery" class="img-fluid rounded-4">
                         </a>
                     </figure>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <figure class="gallery-item text-center">
-                        <a href="images/gallery/gelang-14.jpg" title="doll" class="image-link">
-                            <img src="images/gallery/gelang-14.jpg" alt="gallery" class="img-fluid rounded-4">
+                        <a href="images/gallery/kalung-5.jpg" title="doll" class="image-link">
+                            <img src="images/gallery/kalung-5.jpg" alt="gallery" class="img-fluid rounded-4">
                         </a>
                     </figure>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <figure class="gallery-item text-center">
-                        <a href="images/gallery/gelang-14.jpg" data-lightbox-gallery="gallery1" title="doll"
+                        <a href="images/gallery/kalung-.9jpg" data-lightbox-gallery="gallery1" title="doll"
                             class="image-link">
-                            <img src="images/gallery/gelang-14.jpg" alt="gallery" class="img-fluid rounded-4">
+                            <img src="images/gallery/kalung-9.jpg" alt="gallery" class="img-fluid rounded-4">
                         </a>
                     </figure>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <figure class="gallery-item text-center">
-                        <a href="images/gallery/gelang-14.jpg" data-lightbox-gallery="gallery1" title="doll"
+                        <a href="images/gallery/strap-3.jpg" data-lightbox-gallery="gallery1" title="doll"
                             class="image-link">
-                            <img src="images/gallery/gelang-14.jpg" alt="gallery" class="img-fluid rounded-4">
+                            <img src="images/gallery/strap-3.jpg" alt="gallery" class="img-fluid rounded-4">
                         </a>
                     </figure>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <figure class="gallery-item text-center">
-                        <a href="images/gallery/gelang-14.jpg" data-lightbox-gallery="gallery1" title="doll"
+                        <a href="images/gallery/strap-5.jpg" data-lightbox-gallery="gallery1" title="doll"
                             class="image-link">
-                            <img src="images/gallery/gelang-14.jpg" alt="gallery" class="img-fluid rounded-4">
+                            <img src="images/gallery/strap-5.jpg" alt="gallery" class="img-fluid rounded-4">
                         </a>
                     </figure>
                 </div>
@@ -628,19 +630,13 @@
                         <div class="social-links">
                             <ul class="list-unstyled">
                                 <li class="fw-medium pb-2">
-                                    <a href="facebook.com">Facebook </a>
+                                    <a href="facebook.com">Whatsapp </a>
                                 </li>
                                 <li class="fw-medium pb-2">
                                     <a href="instagram.com">Instagram </a>
                                 </li>
                                 <li class="fw-medium pb-2">
-                                    <a href="pinterest.com">Pinterest </a>
-                                </li>
-                                <li class="fw-medium pb-2">
-                                    <a href="twitter.com">Twitter </a>
-                                </li>
-                                <li class="fw-medium pb-2">
-                                    <a href="youtube.com">Youtube </a>
+                                    <a href="twitter.com">Shopee </a>
                                 </li>
                             </ul>
                         </div>
