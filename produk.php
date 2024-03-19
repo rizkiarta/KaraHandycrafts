@@ -1,3 +1,7 @@
+<?php
+include "koneksi.php";
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -14,6 +18,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
         href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600&family=Nunito:wght@700;800;900;1000&display=swap"
         rel="stylesheet">
@@ -38,6 +45,10 @@
         <symbol xmlns="http://www.w3.org/2000/svg" id="chevron-right" viewBox="0 0 16 16">
             <path fill-rule="evenodd"
                 d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" id="whatsapp" height="14" width="12.25" viewBox="0 0 448 512">
+            <path fill="#a8a8a8"
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
         </symbol>
         <symbol xmlns="http://www.w3.org/2000/symbol" id="cart" viewBox="0 0 21 21">
             <g fill="none" fill-rule="evenodd">
@@ -80,25 +91,7 @@
                 d="M15.75 19.13c-.83 0-1.5-.84-1.5-1.88c0-1.03.67-1.87 1.5-1.87s1.5.84 1.5 1.87c0 1.04-.67 1.88-1.5 1.88M12 11.25c-1.24 0-2.25-.84-2.25-1.87c0-1.04 1.01-1.88 2.25-1.88s2.25.84 2.25 1.88c0 1.03-1.01 1.87-2.25 1.87m-3.75 7.88c-.83 0-1.5-.84-1.5-1.88c0-1.03.67-1.87 1.5-1.87s1.5.84 1.5 1.87c0 1.04-.67 1.88-1.5 1.88M12 8.25c.41 0 .75.34.75.75s-.34.75-.75.75s-.75-.34-.75-.75s.34-.75.75-.75M18.75 12c-.32 0-.63.07-.91.2c-.48-.61-1.13-1.13-1.91-1.53c.57-.8.91-1.77.91-2.82v-.06c1.09-.23 1.91-1.2 1.91-2.37c0-1.33-1.09-2.42-2.42-2.42c-.69 0-1.33.29-1.75.75a4.813 4.813 0 0 0-5.16 0C9 3.29 8.36 3 7.67 3C6.34 3 5.25 4.09 5.25 5.42c0 1.16.82 2.13 1.9 2.37v.06c0 1.05.35 2.03.91 2.82c-.77.4-1.42.92-1.9 1.53A2.24 2.24 0 0 0 3 14.25c0 1.25 1 2.25 2.25 2.25h.06c-.04.24-.06.5-.06.75c0 2.07 1.34 3.75 3 3.75c1.01 0 1.9-.63 2.45-1.59c.42.06.85.09 1.3.09c.45 0 .88-.03 1.3-.09c.55.96 1.44 1.59 2.45 1.59c1.66 0 3-1.68 3-3.75c0-.25-.02-.51-.06-.75h.06c1.25 0 2.25-1 2.25-2.25S20 12 18.75 12" />
         </symbol>
     </svg>
-    <!-- <div class="preloader">
-        <div class="loader">
-            <div class="dot">
-                <svg class="teddybear svg-white" width="40" height="40">
-                    <use xlink:href="#teddybear"></use>
-                </svg>
-            </div>
-            <div class="dot">
-                <svg class="teddybear svg-white" width="40" height="40">
-                    <use xlink:href="#teddybear"></use>
-                </svg>
-            </div>
-            <div class="dot">
-                <svg class="teddybear svg-white" width="40" height="40">
-                    <use xlink:href="#teddybear"></use>
-                </svg>
-            </div>
-        </div>
-    </div> -->
+
     <header id="header" class="site-header bg-light py-3">
         <nav class="navbar navbar-expand-lg" aria-label="Offcanvas navbar large">
             <div class="container-lg">
@@ -127,14 +120,12 @@
                                     aria-expanded="false">Shop</a>
                             </li>
                             <li class="nav-item ms-3 ">
-                                <a class="nav-link text-dark" href="gallery.php" role="button"
+                                <a class="nav-link text-dark" href="galerry.php" role="button"
                                     aria-expanded="false">Gallery</a>
                             </li>
-                            <li class="nav-item ms-3">
-                                <a class="nav-link text-dark" href="about.php">About Us</a>
-                            </li>
                             <li class="nav-item ms-3 ">
-                                <a class="nav-link text-dark" href="contact.php" role="button" aria-expanded="false">Contact
+                                <a class="nav-link text-dark" href="contact.php" role="button"
+                                    aria-expanded="false">Contact
                                     Us</a>
                             </li>
                         </ul>
@@ -157,59 +148,12 @@
         </nav>
     </header>
 
-    <!-- KATEGORI -->
-    <section id="category" class="my-lg-12 py-lg-7 mb-lg-0 position-relative bg-light">
-        <div class="cloud-overlay position-absolute overflow-x-hidden w-100">
-            <img src="images/cloud-pattern-overlay.png" alt="icon overlay">
+    <div class="display-header text-center position-relative">
+        <div class="icon-overlay">
+            <img src="images/star-icon-overlay.png" alt="icon overlay">
         </div>
-        <div class="container-lg">
-            <div class="row justify-content-center">
-                <div class="display-header text-center position-relative">
-                    <h2 class="display-2">Category</h2>
-                    <div class="icon-overlay position-absolute">
-                        <img src="images/star-icon-overlay.png" alt="icon overlay">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6 mb-4">
-                    <div class="image-holder position-relative">
-                        <img src="images/pages/kate-1.jpg" alt="dress" class="img-fluid rounded-4">
-                        <div class="btn-wrap position-absolute d-flex align-items-center justify-content-center">
-                            <a href="shop.html" class="btn btn-md btn-primary text-uppercase rounded-0">Gelang</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 mb-4">
-                    <div class="image-holder position-relative">
-                        <img src="images/pages/kate-2.jpg" alt="hats" class="img-fluid rounded-4">
-                        <div class="btn-wrap position-absolute d-flex align-items-center justify-content-center">
-                            <a href="shop-with-sidebar.html"
-                                class="btn btn-md btn-primary  text-uppercase rounded-0">Kalung</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 mb-4">
-                    <div class="image-holder position-relative">
-                        <img src="images/pages/kate-3.jpg" alt="toys" class="img-fluid rounded-4">
-                        <div class="btn-wrap position-absolute d-flex align-items-center justify-content-center">
-                            <a href="shop-with-sidebar.html"
-                                class="btn btn-md btn-primary  text-uppercase rounded-0">Strap</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 mb-4">
-                    <div class="image-holder position-relative">
-                        <img src="images/pages/kate-4.jpg" alt="toys" class="img-fluid rounded-4">
-                        <div class="btn-wrap position-absolute d-flex align-items-center justify-content-center">
-                            <a href="shop-with-sidebar.html"
-                                class="btn btn-md btn-primary  text-uppercase rounded-0">Cin-cin</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <h2 class="display-2 mt-0">Shop</h2>
+    </div>
 
     <div id="scroll-top-btn" class="bg-light rounded-pill text-primary position-fixed">
         <svg class="teddybear" width="50" height="50">
@@ -220,114 +164,24 @@
     <!-- PRODUCT-->
     <section id="featured-product" class="py-lg-6 bg-light position-relative">
         <div class="container-lg">
-            <div class="display-header text-center position-relative">
-                <div class="icon-overlay">
-                    <img src="images/star-icon-overlay.png" alt="icon overlay">
-                </div>
-                <h2 class="display-2 mt-0">Best Products</h2>
-            </div>
+
             <div class="swiper product-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="product-item">
                             <div class="image-holder text-center p-3 mb-4 border rounded-4">
-                                <img src="images/produk/gelang-10.jpg" alt="toy" class="img-fluid">
-                            </div>
-                            <div class="product-info ps-2">
-                                <h3 class="m-0">
-                                    <a href="single-product.html" class="text-secondary">Cotton Outlay</a>
-                                </h3>
-                                <div class="product-price text-primary">Rp15.000</div>
-                                <a href="cart.html"
-                                    class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
-                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
-                                    aria-controls="offcanvasCart">Order Now
-                                    <svg class="cart" width="18" height="18">
-                                        <use xlink:href="#cart"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-item">
-                            <div class="image-holder text-center p-3 mb-4 border rounded-4">
-                                <img src="images/produk/gelang-18.jpg" alt="toy" class="img-fluid">
+                                <img src="images/produk/gelang-18.jpg" alt="product" class="img-fluid">
                             </div>
                             <div class="product-info ps-2">
                                 <h3 class="m-0">
                                     <a href="single-product.html" class="text-secondary">Woollen Pattern</a>
                                 </h3>
                                 <div class="product-price text-primary">Rp15.000</div>
-                                <a href="cart.html"
-                                    class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
-                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
-                                    aria-controls="offcanvasCart">Order Now
-                                    <svg class="cart" width="18" height="18">
-                                        <use xlink:href="#cart"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-item">
-                            <div class="image-holder text-center p-3 mb-4 border rounded-4">
-                                <img src="images/produk/kalung-7.jpg" alt="toy" class="img-fluid">
-                            </div>
-                            <div class="product-info ps-2">
-                                <h3 class="m-0">
-                                    <a href="single-product.html" class="text-secondary">Casual Rabbit</a>
-                                </h3>
-                                <div class="product-price text-primary">Rp15.000</div>
-                                <a href="cart.html"
-                                    class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
-                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
-                                    aria-controls="offcanvasCart">Order Now
-                                    <svg class="cart" width="18" height="18">
-                                        <use xlink:href="#cart"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-item">
-                            <div class="image-holder text-center p-3 mb-4 border rounded-4">
-                                <img src="images/produk/kalung-9.jpg" alt="toy" class="img-fluid">
-                            </div>
-                            <div class="product-info ps-2">
-                                <h3 class="m-0">
-                                    <a href="single-product.html" class="text-secondary">Uffy Unicorn</a>
-                                </h3>
-                                <div class="product-price text-primary">Rp15.000</div>
-                                <a href="cart.html"
-                                    class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
-                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
-                                    aria-controls="offcanvasCart">Order Now
-                                    <svg class="cart" width="18" height="18">
-                                        <use xlink:href="#cart"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-item">
-                            <div class="image-holder text-center p-3 mb-4 border rounded-4">
-                                <img src="images/produk/strap-3.jpg" alt="toy" class="img-fluid">
-                            </div>
-                            <div class="product-info ps-2">
-                                <h3 class="m-0">
-                                    <a href="single-product.html" class="text-secondary">Cotton Outlay</a>
-                                </h3>
-                                <div class="product-price text-primary">Rp15.000</div>
-                                <a href="cart.html"
-                                    class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
-                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
-                                    aria-controls="offcanvasCart">Order Now
-                                    <svg class="cart" width="18" height="18">
-                                        <use xlink:href="#cart"></use>
+                                <a href="" class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
+                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasChart"
+                                    aria-controls="offcanvasChart">Order Now
+                                    <svg class="chart" width="18" height="18">
+                                        <use xlink:href="#whatsapp"></use>
                                     </svg>
                                 </a>
                             </div>
@@ -335,80 +189,11 @@
                     </div>
                 </div>
             </div>
-            <div class="arrow-wrap">
-                <div
-                    class="swiper-arrow chevron-arrow-left position-absolute d-flex align-items-center border bg-light rounded-pill justify-content-center p-3">
-                    <svg class="chevron-left" width="25" height="25">
-                        <use xlink:href="#chevron-left"></use>
-                    </svg>
-                </div>
-                <div
-                    class="swiper-arrow chevron-arrow-right position-absolute d-flex align-items-center border bg-light rounded-pill justify-content-center p-3">
-                    <svg class="chevron-right" width="25" height="25">
-                        <use xlink:href="#chevron-right"></use>
-                    </svg>
-                </div>
+            <div class="see-more">
+                <button class="btn btn-primary text-capitalize rounded-pill mt-4 p-8 " type=" submit">See
+                    More</button>
+                </adiv>
             </div>
-        </div>
-    </section>
-
-    <!-- TESTI -->
-    <section id="testimonials" class="py-lg-7 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-4">
-                    <div class="quotation-mark">
-                        <svg class="quote text-primary" width="167">
-                            <use xlink:href="#quote" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-8 position-relative">
-                    <div class="swiper review-swiper d-flex mt-5">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="review-item col-md-11">
-                                    <blockquote class="fs-2">I recently visited this kid
-                                        store & impressed with products
-                                        they offer. There is from clothing to toys to
-                                        educational games, they have
-                                        everything.</blockquote>
-                                    <div class="author-detail">
-                                        <div class="name text-secondary text-uppercase pt-2">
-                                            - Joshna Brown</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="review-item col-md-11">
-                                    <blockquote class="fs-2">Toys are intriguing, and I
-                                        want to see what I can do with
-                                        them. On a deeper level, they represent one way
-                                        that society socializes its
-                                        young.</blockquote>
-                                    <div class="author-detail">
-                                        <div class="name text-secondary text-uppercase pt-2">
-                                            - Emma Turner</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="review-item col-md-11">
-                                    <blockquote class="fs-2">To a child, often the box a
-                                        toy came in is more appealing
-                                        than the toy itself.</blockquote>
-                                    <div class="author-detail">
-                                        <div class="name text-secondary text-uppercase pt-2">
-                                            - Jennie Lewis</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination position-absolute text-start"></div>
-                </div>
-            </div>
-        </div>
     </section>
 
 
@@ -426,16 +211,13 @@
                                 <a href="index.html" class="item-anchor">Home</a>
                             </li>
                             <li class="menu-item pb-2">
-                                <a href="about.html" class="item-anchor">About</a>
-                            </li>
-                            <li class="menu-item pb-2">
-                                <a href="blog-with-sidebar.html" class="item-anchor">Blog</a>
-                            </li>
-                            <li class="menu-item pb-2">
                                 <a href="shop-with-sidebar.html" class="item-anchor">Shop</a>
                             </li>
                             <li class="menu-item pb-2">
                                 <a href="contact.html" class="item-anchor">Contact</a>
+                            </li>
+                            <li class="menu-item pb-2">
+                                <a href="contact.html" class="item-anchor">Gallery</a>
                             </li>
                         </ul>
                     </div>

@@ -1,5 +1,6 @@
 <?php
 include "koneksi.php";
+$queryProduk = mysqli_query($koneksi, "SELECT id_produk, nama_produk, harga, detail FROM produk LIMIT 4");
 ?>
 
 <!DOCTYPE html>
@@ -325,104 +326,40 @@ include "koneksi.php";
     </div>
 
     <!-- PRODUCT-->
-    <section id="featured-product" class="py-lg-6 bg-light position-relative">
-        <div class="container-lg">
+    <section id="best-produk" class=" bg-light position-relative">
+        <div class="container-fluid py-5">
             <div class="display-header text-center position-relative">
                 <div class="icon-overlay">
                     <img src="images/star-icon-overlay.png" alt="icon overlay">
                 </div>
                 <h2 class="display-2 mt-0">Best Products</h2>
             </div>
-            <div class="swiper product-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="product-item">
-                            <div class="image-holder text-center p-3 mb-4 border rounded-4">
-                                <img src="images/produk/gelang-18.jpg" alt="product" class="img-fluid">
-                            </div>
-                            <div class="product-info ps-2">
-                                <h3 class="m-0">
-                                    <a href="single-product.html" class="text-secondary">Woollen Pattern</a>
-                                </h3>
-                                <div class="product-price text-primary">Rp15.000</div>
-                                <a href="" class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
-                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasChart"
-                                    aria-controls="offcanvasChart">Order Now
-                                    <svg class="chart" width="18" height="18">
-                                        <use xlink:href="#whatsapp"></use>
-                                    </svg>
-                                </a>
-                            </div>
+            <div class="row mt-5">
+                <!-- <?php while($data = mysqli_fetch_array($queryProduk)){?> -->
+                <div class="col-sm-6 col-md-3 mb-2">
+                    <div class="product-item">
+                        <div class="image-holder text-center p-3 mb-4 border rounded-4">
+                            <img src="images/produk/gelang-18.jpg" alt="product" class="img-fluid">
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-item">
-                            <div class="image-holder text-center p-3 mb-4 border rounded-4">
-                                <img src="images/produk/kalung-7.jpg" alt="toy" class="img-fluid">
-                            </div>
-                            <div class="product-info ps-2">
-                                <h3 class="m-0">
-                                    <a href="single-product.html" class="text-secondary">Casual Rabbit</a>
-                                </h3>
-                                <div class="product-price text-primary">Rp15.000</div>
-                                <a href="" class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
-                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasOrder"
-                                    aria-controls="offcanvasOrder">Order Now
-                                    <svg class="order" width="18" height="18">
-                                        <use xlink:href="#whatsapp"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-item">
-                            <div class="image-holder text-center p-3 mb-4 border rounded-4">
-                                <img src="images/produk/kalung-9.jpg" alt="toy" class="img-fluid">
-                            </div>
-                            <div class="product-info ps-2">
-                                <h3 class="m-0">
-                                    <a href="single-product.html" class="text-secondary">Uffy Unicorn</a>
-                                </h3>
-                                <div class="product-price text-primary">Rp15.000</div>
-                                <a href="" class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
-                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasOrder"
-                                    aria-controls="offcanvasOrder">Order Now
-                                    <svg class="order" width="18" height="18">
-                                        <use xlink:href="#whatsapp"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-item">
-                            <div class="image-holder text-center p-3 mb-4 border rounded-4">
-                                <img src="images/produk/strap-3.jpg" alt="toy" class="img-fluid">
-                            </div>
-                            <div class="product-info ps-2">
-                                <h3 class="m-0">
-                                    <a href="single-product.html" class="text-secondary">Cotton Outlay</a>
-                                </h3>
-                                <div class="product-price text-primary">Rp15.000</div>
-                                <a href="" class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
-                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasOrder"
-                                    aria-controls="offcanvasOrder">Order Now
-                                    <svg class="order" width="18" height="18">
-                                        <use xlink:href="#whatsapp"></use>
-                                    </svg>
-                                </a>
-                            </div>
+                        <div class="product-info ps-2">
+                            <h3 class="m-0">
+                                <a href="single-product.html" class="text-secondary">Woollen Pattern</a>
+                            </h3>
+                            <div class="product-price text-primary">Rp15.000</div>
+                            <a href="" class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasChart"
+                                aria-controls="offcanvasChart">Order Now
+                                <svg class="chart" width="18" height="18">
+                                    <use xlink:href="#whatsapp"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="see-more">
-                <button class="btn btn-primary text-capitalize rounded-pill mt-4 p-8 " type=" submit">See
-                    More</button>
-                </adiv>
+                <?php } ?>
             </div>
     </section>
+
 
     <!-- ABOUT US -->
     <section id="about" class="py-lg-7 bg-light">
