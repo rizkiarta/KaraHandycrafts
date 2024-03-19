@@ -170,7 +170,7 @@ include "koneksi.php";
                     <div class="swiper-slide">
                         <div class="product-item">
                             <div class="image-holder text-center p-3 mb-4 border rounded-4">
-                                <img src="images/produk/gelang-18.jpg" alt="product" class="img-fluid">
+                                <img src="images/<?php echo $data['img'];?>" alt="product" class="img-fluid">
                             </div>
                             <div class="product-info ps-2">
                                 <h3 class="m-0">

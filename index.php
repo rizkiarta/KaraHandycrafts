@@ -326,7 +326,7 @@ $queryProduk = mysqli_query($koneksi, "SELECT id_produk, nama_produk, harga, det
     </div>
 
     <!-- PRODUCT-->
-    <section id="best-produk" class=" bg-light position-relative">
+    <section id="best-produk" class="py-lg-6 bg-light position-relative">
         <div class="container-fluid py-5">
             <div class="display-header text-center position-relative">
                 <div class="icon-overlay">
@@ -335,11 +335,11 @@ $queryProduk = mysqli_query($koneksi, "SELECT id_produk, nama_produk, harga, det
                 <h2 class="display-2 mt-0">Best Products</h2>
             </div>
             <div class="row mt-5">
-                <!-- <?php while($data = mysqli_fetch_array($queryProduk)){?> -->
-                <div class="col-sm-6 col-md-3 mb-2">
+                <?php while($data = mysqli_fetch_array($queryProduk)){?>
+                <div class="col-sm-6 col-md-3 mb-4">
                     <div class="product-item">
                         <div class="image-holder text-center p-3 mb-4 border rounded-4">
-                            <img src="images/produk/gelang-18.jpg" alt="product" class="img-fluid">
+                            <img src="images/<?php echo $data['img'];?>">
                         </div>
                         <div class="product-info ps-2">
                             <h3 class="m-0">
@@ -362,7 +362,7 @@ $queryProduk = mysqli_query($koneksi, "SELECT id_produk, nama_produk, harga, det
 
 
     <!-- ABOUT US -->
-    <section id="about" class="py-lg-7 bg-light">
+    <section id=" about" class="py-lg-7 bg-light">
         <div class="container">
             <div class="row">
                 <div class="display-header text-center position-relative">
@@ -380,11 +380,15 @@ $queryProduk = mysqli_query($koneksi, "SELECT id_produk, nama_produk, harga, det
                 </div>
                 <div class="col-lg-8 col-md-8 position-relative">
                     <div class="review-item col-md-12">
-                        <blockquote class="fs-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cum
+                        <blockquote class="fs-4">Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Error cum
                             hic
-                            eius ullam voluptatem quod magni veritatis dolorum nobis optio laudantium quia unde sed
-                            adipisci accusamus, dignissimos debitis autem quaerat magnam, atque omnis repellat. Non
-                            praesentium distinctio soluta cumque autem at ullam omnis odio, sapiente, voluptates eum,
+                            eius ullam voluptatem quod magni veritatis dolorum nobis optio
+                            laudantium quia unde sed
+                            adipisci accusamus, dignissimos debitis autem quaerat magnam, atque
+                            omnis repellat. Non
+                            praesentium distinctio soluta cumque autem at ullam omnis odio,
+                            sapiente, voluptates eum,
                             voluptate magnam natus.</blockquote>
                     </div>
                 </div>
