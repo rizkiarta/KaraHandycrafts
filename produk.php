@@ -177,9 +177,8 @@ include "koneksi.php";
                                     <a href="single-product.html" class="text-secondary">Woollen Pattern</a>
                                 </h3>
                                 <div class="product-price text-primary">Rp15.000</div>
-                                <a href="" class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm"
-                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasChart"
-                                    aria-controls="offcanvasChart">Order Now
+                                <a href="https://wa.me/6283168042239?text=hello%20cug%20woiii" target="blank" class="btn btn-outline-gray text-capitalize rounded-pill mt-4 btn-sm">
+                                    WhatsApp
                                     <svg class="chart" width="18" height="18">
                                         <use xlink:href="#whatsapp"></use>
                                     </svg>
@@ -208,7 +207,7 @@ include "koneksi.php";
                         <h5 class="widget-title text-secondary">Quick Links</h5>
                         <ul class="menu-list list-unstyled">
                             <li class="menu-item pb-2">
-                                <a href="index.html" class="item-anchor">Home</a>
+                                <a href="index.php" class="item-anchor">Home</a>
                             </li>
                             <li class="menu-item pb-2">
                                 <a href="shop-with-sidebar.html" class="item-anchor">Shop</a>
@@ -231,10 +230,10 @@ include "koneksi.php";
                                     <a href="facebook.com">Whatsapp </a>
                                 </li>
                                 <li class="fw-medium pb-2">
-                                    <a href="instagram.com">Instagram </a>
+                                    <a href="https://www.instagram.com/kara.handycrafts/">Instagram </a>
                                 </li>
                                 <li class="fw-medium pb-2">
-                                    <a href="twitter.com">Shopee </a>
+                                    <a href="twitter.com"> </a>
                                 </li>
                             </ul>
                         </div>
@@ -245,12 +244,11 @@ include "koneksi.php";
                         <h5 class="widget-title text-secondary">Contact</h5>
                         <div class="social-links">
                             <ul class="list-unstyled">
-                                <li class="fw-medium pb-2"> 000 111 222 333 444 </li>
+                                <li class="fw-medium pb-2"> +62 831 6804 2239 </li>
                                 <li class="fw-medium pb-2">
-                                    <a href="mailto:yourinfo@gmail.com">Yourinfo@gmail.com</a>
+                                    <a href="mailto:yourinfo@gmail.com">karahandycrafts@gmail.com</a>
                                 </li>
-                                <li class="fw-medium pb-2">Sonoma, Monterey, San Luis
-                                    Opispo, Santa Barbara
+                                <li class="fw-medium pb-2">jl.Khairbras No.50
                                 </li>
                             </ul>
                         </div>
